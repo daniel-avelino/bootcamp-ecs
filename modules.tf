@@ -33,7 +33,7 @@ module "ecs" {
   ]
 
   availability_zones = [
-    module.vpc.public_subnet_1a,
+    module.vpc.public_subnet_1a.id,
     module.vpc.public_subnet_1b,
   ]
 }
@@ -53,7 +53,7 @@ module "pipeline" {
   region                = "${var.aws_region}"
 
   subnet_ids = [
-    module.vpc.public_subnet_1a,
-    module.vpc.public_subnet_1b,
+    module.vpc.public_subnet_1a.id,
+    module.vpc.public_subnet_1b.id,
   ]
 }
