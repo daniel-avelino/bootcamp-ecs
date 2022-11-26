@@ -33,8 +33,8 @@ module "ecs" {
   ]
 
   availability_zones = [
-    module.vpc.public_subnet_1a,
-    module.vpc.public_subnet_1b,
+    values(module.vpc.public_subnet_1a),
+    values(module.vpc.public_subnet_1b),
   ]
 }
 
