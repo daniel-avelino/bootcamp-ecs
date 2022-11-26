@@ -3,7 +3,7 @@ resource "aws_security_group" "app_sg" {
   name        = "${var.cluster_name}-app-sg"
   description = "Default security group to allow inbound/outbound from the VPC"
   vpc_id      = "${aws_vpc.cluster_vpc.id}"
-  depends_on  = ["aws_vpc.cluster_vpc"]
+  depends_on  = [aws_vpc.cluster_vpc]
 
   ingress {
     from_port = "0"

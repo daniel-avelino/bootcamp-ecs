@@ -6,8 +6,8 @@ resource "aws_ecs_service" "web-api" {
   desired_count   = "${var.desired_tasks}"
 
   network_configuration {
-    security_groups  = ["${var.security_groups_ids}"]
-    subnets          = ["${var.availability_zones}"]
+    security_groups  = var.security_groups_ids
+    subnets          = var.availability_zones
     assign_public_ip = true
   }
 
