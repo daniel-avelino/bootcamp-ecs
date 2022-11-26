@@ -34,7 +34,7 @@ module "ecs" {
 
   availability_zones = [
     module.vpc.public_subnet_1a[0],
-    module.vpc.public_subnet_1b[1],
+    module.vpc.public_subnet_1b[0],
   ]
 }
 
@@ -54,6 +54,6 @@ module "pipeline" {
 
   subnet_ids = [
     "${module.vpc.public_subnet_1a[0]}",
-    "${module.vpc.public_subnet_1b[1]}",
+    "${module.vpc.public_subnet_1b[0]}",
   ]
 }
