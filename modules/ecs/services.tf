@@ -21,5 +21,5 @@ resource "aws_ecs_service" "web-api" {
     ignore_changes = ["desired_count", "task_definition"]
   }  
 
-  depends_on = ["aws_alb_target_group.api_target_group"]
+  depends_on = [aws_alb_target_group.api_target_group]
 }
