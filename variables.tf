@@ -85,7 +85,7 @@ variable "git_repository_name" {
 # Default Branch
 variable "git_repository_branch" {
   description = "Github Project Branch"
-  default     = "master"
+  default     = "main"
 }
 
 # Customize your AWS Region
