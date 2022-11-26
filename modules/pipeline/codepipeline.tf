@@ -55,7 +55,7 @@ resource "aws_codepipeline" "pipeline" {
       input_artifacts = ["imagedefinitions"]
       version         = "1"
 
-      configuration {
+      configuration = {
         ClusterName = "${var.cluster_name}"
         ServiceName = "${var.app_service_name}"
         FileName    = "imagedefinitions.json"
