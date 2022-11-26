@@ -15,7 +15,7 @@ resource "aws_codepipeline" "pipeline" {
       category         = "Source"
       owner            = "ThirdParty"
       provider         = "GitHub"
-      version          = "2"
+      version          = "1"
       output_artifacts = ["source"]
 
       configuration = {
@@ -34,7 +34,7 @@ resource "aws_codepipeline" "pipeline" {
       category         = "Build"
       owner            = "AWS"
       provider         = "CodeBuild"
-      version          = "2"
+      version          = "1"
       input_artifacts  = ["source"]
       output_artifacts = ["imagedefinitions"]
 
@@ -53,7 +53,7 @@ resource "aws_codepipeline" "pipeline" {
       owner           = "AWS"
       provider        = "ECS"
       input_artifacts = ["imagedefinitions"]
-      version         = "2"
+      version         = "1"
 
       configuration = {
         ClusterName = "${var.cluster_name}"
