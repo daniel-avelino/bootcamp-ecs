@@ -88,6 +88,12 @@ variable "git_repository_branch" {
   default     = "main"
 }
 
+# Default Branch
+variable "github_token" {
+  description = "Github Token"
+  default     = ""
+}
+
 # Customize your AWS Region
 variable "aws_region" {
   description = "AWS Region for the VPC"
