@@ -79,13 +79,13 @@ variable "git_repository_owner" {
 # Github Repository Project Name
 variable "git_repository_name" {
   description = "Project name on Github"
-  default     = "bootcamp-api"
+  default     = "docker-node-server"
 }
 
 # Default Branch
 variable "git_repository_branch" {
   description = "Github Project Branch"
-  default     = "main"
+  default     = "master"
 }
 
 # Default Branch
